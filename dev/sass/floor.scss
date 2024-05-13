@@ -1,0 +1,105 @@
+
+.flat {
+	&:hover {
+		.flat-path {
+			fill-opacity: 0.5;
+			stroke-opacity: 0.7;
+		}
+	}
+
+	&.active {
+		.flat-path {
+			fill: #00ff00;
+			stroke: #1d471d;
+			///fill-opacity: 0.5;
+			///stroke-opacity: 0.7;
+		}
+	}
+
+
+.flat-path {
+		fill: #4df04d;
+		stroke: rgb(29, 71, 29);
+		stroke-width: 2px;
+		fill-opacity: 0;
+		stroke-opacity: 0;
+		transition: 0.2s;
+		cursor: pointer;
+	}
+
+	.flat.booking .flat-path {
+		fill: #6B68FF;
+		stroke: #312df6;
+	}
+
+	.flat.sold .flat-path {
+		fill: #D34E4E;
+		stroke: #f11515;
+		cursor: no-drop;
+	}
+
+	.flat.free .flat-path {
+		fill: #00DEFC;
+		stroke: #008fa1;
+	}
+
+	.status {
+		cursor: pointer;
+	}
+
+	.status-cell {
+		stroke: black;
+		stroke-width: 2px;
+	}
+
+	.status-cell__number,
+	.status-cell__text {
+		fill: black;
+		font-weight: bold;
+	}
+
+	.action .status-cell {
+		fill: #80D34E;
+	}
+
+	.booking .status-cell {
+		fill: #6B68FF;
+	}
+
+	.sold .status-cell {
+		fill: #D34E4E;
+	}
+
+	.free .status-cell {
+		fill: #00DEFC;
+	}
+
+	.status-large-cell {
+		fill: white;
+		stroke: black;
+		stroke-width: 2px;
+	}
+}
+
+.floor-options {
+	@extend .container;
+	display: flex;
+	gap: 24px;
+	background-color: #222222;
+	color: white;
+	border: 1px solid;
+	border-radius: 8px;
+	padding: 24px;
+	margin: 12px auto;
+}
+
+.floor-options-item {
+	display: flex;
+	width: 100%;
+	text-align: center;
+	background-color: #404040;
+	padding: 12px;
+	border-radius: 4px;
+	flex-direction: column;
+	align-items: center;
+}
