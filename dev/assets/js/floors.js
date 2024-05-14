@@ -3,7 +3,7 @@ const flatArray = [{
 	house: "2",
 	floor: "1",
 	rooms: "3",
-	square: "95.3 Рј.РєРІ.",
+	square: "95.3 м.кв.",
 	price: "880$",
 	priceTotal: "83 864$",
 	flatNumber: 1,
@@ -14,7 +14,7 @@ const flatArray = [{
 		house: "2",
 		floor: "1",
 		rooms: "2",
-		square: "51,7 Рј.РєРІ.",
+		square: "51,7 м.кв.",
 		price: "880$",
 		priceTotal: "45 496$",
 		flatNumber: 2,
@@ -25,7 +25,7 @@ const flatArray = [{
 		house: "2",
 		floor: "1",
 		rooms: "2",
-		square: "51,7 Рј.РєРІ.",
+		square: "51,7 м.кв.",
 		price: "880$",
 		priceTotal: "45 496$",
 		flatNumber: 3,
@@ -36,7 +36,7 @@ const flatArray = [{
 		house: "2",
 		floor: "1",
 		rooms: "3",
-		square: "92,4 Рј.РєРІ.",
+		square: "92,4 м.кв.",
 		price: "780$",
 		priceTotal: "72 072$",
 		flatNumber: 4,
@@ -47,7 +47,7 @@ const flatArray = [{
 		house: "2",
 		floor: "1",
 		rooms: "3",
-		square: "92.7 Рј.РєРІ.",
+		square: "92.7 м.кв.",
 		price: "780$",
 		priceTotal: "72 306$",
 		flatNumber: 5,
@@ -58,7 +58,7 @@ const flatArray = [{
 		house: "2",
 		floor: "1",
 		rooms: "1",
-		square: "31.9 Рј.РєРІ.",
+		square: "31.9 м.кв.",
 		price: "750$",
 		priceTotal: "23 925$",
 		flatNumber: 6,
@@ -69,7 +69,7 @@ const flatArray = [{
 		house: "2",
 		floor: "1",
 		rooms: "1",
-		square: "38.5 Рј.РєРІ.",
+		square: "38.5 м.кв.",
 		price: "760$",
 		priceTotal: "29 260$",
 		flatNumber: 7,
@@ -80,7 +80,7 @@ const flatArray = [{
 		house: "2",
 		floor: "1",
 		rooms: "1",
-		square: "35.2 Рј.РєРІ.",
+		square: "35.2 м.кв.",
 		price: "760$",
 		priceTotal: "26 752$",
 		flatNumber: 8,
@@ -91,7 +91,7 @@ const flatArray = [{
 		house: "2",
 		floor: "1",
 		rooms: "3",
-		square: "89.3 Рј.РєРІ.",
+		square: "89.3 м.кв.",
 		price: "840$",
 		priceTotal: "75 012$",
 		flatNumber: 9,
@@ -115,7 +115,7 @@ window.addEventListener('load', ()=> {
 				house: "2",
 				floor: "1",
 				rooms: "3",
-				square: "79.3 Рј.РєРІ.",
+				square: "79.3 м.кв.",
 				price: "880$",
 				priceTotal: "55510$",
 				flatNumber: 9,
@@ -133,35 +133,35 @@ window.addEventListener('load', ()=> {
 				const flatInformation = array.map(item =>{
 					return (`
                     <div class="info-item">
-                        <div class="info-item__title">РќРѕРјРµСЂ Р±СѓРґРёРЅРєСѓ :</div>
+                        <div class="info-item__title">Номер дома:</div>
                         <div>${item.house}</div>
                     </div>
                     <div class="info-item">
-                        <div class="info-item__title">РџРѕРІРµСЂС…:</div>
+                        <div class="info-item__title">Этаж:</div>
                         <div>${item.floor}</div>
                     </div>
                     <div class="info-item">
-                        <div class="info-item__title">РљС–Р»-С‚СЊ РєС–РјРЅР°С‚:</div>
+                        <div class="info-item__title">Количество комнат:</div>
                         <div>${item.rooms}</div>
                     </div>
                     <div class="info-item">
-                        <div class="info-item__title">РџР»РѕС‰Р° РєРІР°СЂС‚РёСЂРё:</div>
+                        <div class="info-item__title">Площадь квартиры:</div>
                         <div>${item.square}</div>
                     </div>
                     <div class="info-item">
-                        <div class="info-item__title">Р¦С–РЅР° Р·Р° РјВІ:</div>
+                        <div class="info-item__title">Цена за м²:</div>
                         <div>${item.price}</div>
                     </div>
                     <div class="info-item">
-                        <div class="info-item__title">Р¦С–РЅР° Р·Р° РєРІР°СЂС‚РёСЂСѓ:</div>
+                        <div class="info-item__title">Цена за квартиру:</div>
                         <div>${item.priceTotal}</div>
                     </div>
                     <div class="info-item">
-                        <div class="info-item__title">РќРѕРјРµСЂ РєРІР°СЂС‚РёСЂРё:</div>
+                        <div class="info-item__title">Номер квартиры:</div>
                         <div>${item.flatNumber}</div>
                     </div>
                     <div class="info-item">
-                        <div class="info-item__title">РЎС‚Р°С‚СѓСЃ РєРІР°СЂС‚РёСЂРё:</div>
+                        <div class="info-item__title">Статус квартиры:</div>
                         <div>${item.status}</div>
                     </div>
                 `)
@@ -176,13 +176,13 @@ window.addEventListener('load', ()=> {
 
 			flats.forEach(flat => {
 				if (flat.classList.contains('booking')) {
-					flat.querySelector('.status-cell__text-span').innerHTML = "Р‘СЂРѕРЅСЊ"
+					flat.querySelector('.status-cell__text-span').innerHTML = "Бронь"
 				} else if (flat.classList.contains('action')) {
-					flat.querySelector('.status-cell__text-span').innerHTML = "РђРєС†С–СЏ"
+					flat.querySelector('.status-cell__text-span').innerHTML = "Акция"
 				} else if (flat.classList.contains('sold')) {
-					flat.querySelector('.status-cell__text-span').innerHTML = "РџСЂРѕРґР°РЅРѕ"
+					flat.querySelector('.status-cell__text-span').innerHTML = "Продано"
 				} else {
-					flat.querySelector('.status-cell__text-span').innerHTML = "Р’С–Р»СЊРЅР°"
+					flat.querySelector('.status-cell__text-span').innerHTML = "Свободно"
 				}
 
 

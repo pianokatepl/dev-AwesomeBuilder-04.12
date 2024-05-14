@@ -8,16 +8,14 @@
 	}
 
 	&.active {
-		.flat-path {
+		.flat-status-cell__path {
 			fill: #00ff00;
 			stroke: #1d471d;
 			///fill-opacity: 0.5;
 			///stroke-opacity: 0.7;
 		}
 	}
-
-
-.flat-path {
+&-path {
 		fill: #4df04d;
 		stroke: rgb(29, 71, 29);
 		stroke-width: 2px;
@@ -27,18 +25,22 @@
 		cursor: pointer;
 	}
 
-	.flat.booking .flat-path {
-		fill: #6B68FF;
-		stroke: #312df6;
+	&.booking {
+		.flat-status-cell__path {
+			fill: #6B68FF;
+			stroke: #312df6;
+		}
 	}
 
-	.flat.sold .flat-path {
-		fill: #D34E4E;
-		stroke: #f11515;
-		cursor: no-drop;
+	&.sold {
+		.flat-status-cell__path {
+			fill: #D34E4E;
+			stroke: #f11515;
+			cursor: no-drop;
+		}
 	}
 
-	.flat.free .flat-path {
+	&.free {
 		fill: #00DEFC;
 		stroke: #008fa1;
 	}
@@ -79,6 +81,8 @@
 		stroke: black;
 		stroke-width: 2px;
 	}
+
+
 }
 
 .floor-options {
